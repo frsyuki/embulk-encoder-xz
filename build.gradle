@@ -54,16 +54,15 @@ Gem::Specification.new do |spec|
   spec.version       = "${project.version}"
   spec.authors       = ["Sadayuki Furuhashi"]
   spec.summary       = %[Xz encoder plugin for Embulk]
-  spec.description   = %[Encodes files using Xz for other file output plugins.]
+  spec.description   = %[Compress files using XZ (also know as LZMA)]
   spec.email         = ["frsyuki@gmail.com"]
-  spec.licenses      = ["MIT"]
-  # TODO set this: spec.homepage      = "https://github.com/frsyuki/embulk-encoder-xz"
+  spec.licenses      = ["Apache 2.0"]
+  spec.homepage      = "https://github.com/frsyuki/embulk-encoder-xz"
 
   spec.files         = `git ls-files`.split("\n") + Dir["classpath/*.jar"]
   spec.test_files    = spec.files.grep(%r"^(test|spec)/")
   spec.require_paths = ["lib"]
 
-  #spec.add_dependency 'YOUR_GEM_DEPENDENCY', ['~> YOUR_GEM_DEPENDENCY_VERSION']
   spec.add_development_dependency 'bundler', ['~> 1.0']
   spec.add_development_dependency 'rake', ['>= 10.0']
 end
